@@ -3,10 +3,8 @@ import Post from "./components/Post";
 function App() {
   return (
     <main>
-      <Post />
-      <Post />
-      <Post />
-      <Post />
+      <Post author="Anas" body="React.js is awesome!" />
+      <Post author="Ahmed" body="This is the props magic👨‍💻" />
     </main>
   )
 }
