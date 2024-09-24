@@ -1,10 +1,15 @@
 /* eslint-disable react/prop-types */
+import { useNavigate } from 'react-router-dom'
 import classes from './Modal.module.css'
 
-function Modal({ children, onModalClose }) {
+function Modal({ children }) {
+    const navigate = useNavigate();
+    function closeModelHandler() {
+        navigate('..');
+    }
     return (
         <>
-            <div className={classes.backdrop} onClick={onModalClose} />
+            <div className={classes.backdrop} onClick={closeModelHandler} />
             <dialog open className={classes.modal}>
                 {children}
             </dialog>
